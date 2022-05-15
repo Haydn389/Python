@@ -2,7 +2,6 @@ import sys
 
 # k=sys.stdin.readline().strip()
 # n,m=map(int,sys.stdin.readline().split())
-
 # array=list(map(int,sys.stdin.readline().split()))
 
 # k=k.strip('"')
