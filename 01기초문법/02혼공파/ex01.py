@@ -25,11 +25,11 @@
 # print("{: 6d}".format(123))
 # print("{: 6d}".format(-123))
 
+# print("{:f}".format(12.345))
 # print("{:f}".format(12345))
 # print("{:f}".format(1234.5))
-# print("{:f}".format(123.45))
-# print("{:f}".format(12.345))
 # print("{:f}".format(1.2345))
+# print("{:f}".format(123.45))
 # print("{:f}".format(0.12345))
 # print("{:15f}".format(12.345))
 
