@@ -14,8 +14,9 @@
 
 # 103 문자열 자르기
 
-from cgi import print_arguments
+a='  aa  '
+a2=a.strip()
+b="bb"
+print("a는{},b는{}".format(a2.upper(),b))
 
-
-b="1,2,3,4,5".split(",")
-print(b)
+print(b.find(b))
