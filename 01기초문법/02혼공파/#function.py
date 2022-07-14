@@ -1,5 +1,4 @@
 # 100 문자열 양옆 공백 제거
-
 # a="""
 #     안녕하세요
 #     문자열의 함수를 알아봅니다.
@@ -19,4 +18,5 @@ a2=a.strip()
 b="bb"
 print("a는{},b는{}".format(a2.upper(),b))
 
+print(b.find(b))
 print(b.find(b))
