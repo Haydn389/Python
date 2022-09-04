@@ -26,7 +26,7 @@ for i in range(1,n+1):
 #     print()
 
 #질문값 받아서 출력
-for i in range(m):
+for _ in range(m):
     x1,y1,x2,y2 = map(int, sys.stdin.readline().split())
     result=s[x2][y2]-s[x2][y1-1]-s[x1-1][y2]+s[x1-1][y1-1]
     print(result)
