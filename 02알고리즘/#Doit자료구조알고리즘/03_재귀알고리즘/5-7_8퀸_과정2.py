@@ -6,7 +6,7 @@ print(flag)
 print("-------")
 def put():
     for i in range(4):
-        print(f"{pos[i]:2}", end="")
+        print(f"{pos[i]}", end=" ")
     print()
 
 
@@ -18,8 +18,8 @@ def set(i):  # i열에 퀸 배치
                 put()
             else:
                 flag[j]=1 # 플래그 채우기
-                print("True 넣기\t",flag)
+                # print("True 넣기\t",flag)
                 set(i+1)  # 다음열에 퀸 배치
                 flag[j]=0
-                print("False 넣기\t",flag)
+                # print("False 넣기\t",flag)
 set(0)
