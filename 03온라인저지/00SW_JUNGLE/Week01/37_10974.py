@@ -1,7 +1,9 @@
 # 백트래킹 연습(순열)
 # nPm : 서로 다른 n개중에 r개를 선택하는 경우의 수를 의미합니다. (순서 상관 있음)
 import sys
-n, m = map(int, sys.stdin.readline().split())
+# n, m = map(int, sys.stdin.readline().split())
+n=m= int(sys.stdin.readline())
+
 # 1부터 N까지 자연수 중에서 중복없이 M 개를 고른 (길이가 M인)수열
 # i : 트리의 깊이(N-Queen에서는 열 번호, m과 관련)
 # j : 입력되는 값(N-Queen에서는 행 번호, n과 관련)
@@ -15,7 +17,7 @@ def n_queens(i):
         global cnt
         cnt += 1
         for k in range(m):
-            print(pos[k], end=" ")
+            print(pos[k]+1, end=" ")
         print()
         return
     for j in range(n):
@@ -26,4 +28,4 @@ def n_queens(i):
             flag_c[j] = False
             
 n_queens(0)
-print(cnt)
+# print(cnt)

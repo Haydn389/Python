@@ -13,7 +13,7 @@ def bubble_sort(a: MutableSequence) -> None:
     for i in range(n-1):  # ** i =0,1,2,3,4,5 즉 n-1인 6번 반복됨
         ex = 0 #이번 패스에서 교환횟수 초기화
         for j in range(n-1, i, -1):  # j =
-            cnt += 1
+            # cnt += 1
             if a[j-1] > a[j]:
                 a[j-1], a[j] = a[j], a[j-1]
                 ex += 1 #교환회수 찾기

@@ -14,6 +14,7 @@ def select(a):
             a[i],a[min]=a[min],a[i]
 
 
+
 select(a)
 print(a)
 print(cnt)

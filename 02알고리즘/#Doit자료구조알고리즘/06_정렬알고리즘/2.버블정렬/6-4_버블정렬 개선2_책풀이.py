@@ -3,8 +3,9 @@
 
 from typing import MutableSequence
 
-# a=[1,3,9,4,7,8,6]
-a = [9, 1, 3, 4, 6, 7, 8]  # 셰이커정렬
+a=[1,3,9,4,7,8,6]
+# a = [9, 1, 3, 4, 6, 7, 8]  # 셰이커정렬
+# a = [7,1,6,2,4,3,5]
 cnt = 0
 flag = 0
 
@@ -13,14 +14,13 @@ def bubble_sort(a: MutableSequence) -> None:
     n = len(a)  # n=7
     for i in range(n-1):  # ** i =0,1,2,3,4,5 즉 n-1인 6번 반복됨
         ex = 0  # 이번 패스에서 교환횟수 초기화
-
         for j in range(n-1, flag, -1):  # j =
+            cnt += 1
+            print(j,">>",a)
             if a[j-1] > a[j]:
                 a[j-1], a[j] = a[j], a[j-1]
                 ex += 1  # 교환회수 찾기
                 flag = j
-            cnt += 1
-            print(a)
         if ex == 0:
             break
 
@@ -28,4 +28,4 @@ def bubble_sort(a: MutableSequence) -> None:
 bubble_sort(a)
 
 print(a)
-print(cnt)
+print("비교횟수:",cnt)

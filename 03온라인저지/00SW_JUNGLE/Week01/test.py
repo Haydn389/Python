@@ -1,2 +1,1 @@
-print(9)
-print(9**2)
+print(4%4)
