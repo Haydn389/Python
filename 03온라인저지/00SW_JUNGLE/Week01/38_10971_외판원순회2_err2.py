@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**8)  # 10^8 까지 늘림.
+# sys.setrecursionlimit(10**8)  # 10^8 까지 늘림.
 m = n = int(sys.stdin.readline())
 data = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 pos = [0]*m

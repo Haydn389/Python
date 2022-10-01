@@ -1,0 +1,14 @@
+from __future__ import annotations
+from turtle import left
+from typing import Any, Type
+
+class Node:
+    def __init__(self,key:Any, value:Any, left:Node=None, right:Node =None):
+        self.key=key
+        self.value=value
+        self.left=left
+        self.right=right
+    
+class BinarySearchTree:
+    def __init__(self):
+        self.root=None
