@@ -12,5 +12,5 @@ queue.append([4])
 queue.popleft()
 
 print(queue)
-queue.reverse()
+queue.reverse()  
 print(queue)
