@@ -1,6 +1,6 @@
 # https://dev-dain.tistory.com/149
-# s = input()
-s = "(()[[]])([])"
+s = input()
+# s = "(()[[]])([])"
 stack = []
 temp = 1
 res = 0
