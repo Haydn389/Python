@@ -1,5 +1,4 @@
 from collections import deque
-from random import randrange
 import sys
 
 n,m=map(int,sys.stdin.readline().split())
