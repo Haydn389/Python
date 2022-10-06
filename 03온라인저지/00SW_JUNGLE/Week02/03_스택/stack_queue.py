@@ -22,3 +22,12 @@ class Stack:
 
     def isEmpty(self):
         return len(self)==0
+
+s=Stack()
+
+s.push(1)
+s.push(1)
+s.push(1)
+s.push(1)
+s.pop()
+print(len(s))
