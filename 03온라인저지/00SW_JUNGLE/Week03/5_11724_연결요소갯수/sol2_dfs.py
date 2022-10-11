@@ -9,12 +9,10 @@ def dfs(v):
     visited[v]=True
     # print(v,end=" ")
     # for i in sorted(graph[v]):
-    flag=True
     for i in graph[v]:
         if not visited[i]:
-            flag=False
             dfs(i)
-    if flag:res+=1
+
 
 if __name__ == "__main__":
     res=0
