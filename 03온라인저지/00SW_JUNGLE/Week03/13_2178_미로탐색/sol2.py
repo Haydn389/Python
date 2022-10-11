@@ -17,15 +17,9 @@ def bfs(x, y):
         for i in range(4):
             nx=x+dx[i]
             ny=y+dy[i]
-            if 0<=nx<n and 0<=ny<m and a[nx][ny]==1:
-            # if nx<0 or ny<0 or nx>=n or ny>=m or a[nx][ny]!=1: #범위를 벗어났거나 길이 아닌곳일때(1이 아닐때)
-            #     continue
-            # if a[nx][ny]==1:
+            if 0<=nx<n and 0<=ny<m and a[nx][ny]==1: #범위를 벗어났거나 길이 아닌곳일때(1이 아닐때)
                 a[nx][ny]=a[x][y]+1
                 queue.append((nx,ny))
-        # print("*"*50)
-        # for p in a:
-        #     print(*p)
     return a[n-1][m-1]
 print(bfs(0,0))
 

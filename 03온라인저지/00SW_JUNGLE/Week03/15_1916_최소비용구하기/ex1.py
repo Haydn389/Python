@@ -7,7 +7,7 @@ v=int(input())
 e=int(input())
 graph=[[] for _ in range(v+1)]
 distance=[INF]*(v+1)
-for _ in range(e):  #!** 힙에 넣어야 하나? 그냥 리스트에 넣어야하나? --> 힙
+for _ in range(e):  #!** 힙에 넣어야 하나? 그냥 리스트에 넣어야하나? --> 그냥리스트
     a,b,c=map(int,input().split())
     graph[a].append((b,c)) #노드정보, 비용을 차례로 입력
 

@@ -1,9 +1,5 @@
 from heapq import heapify,heappop,heappush
-
-
 n=int(input())
-
-
 a=[list(map(int,list(input().rstrip()))) for _ in range(n)]
 visited=[[False]*n for _ in range(n)]
 # print(a)
@@ -26,7 +22,7 @@ def ds(x,y):
                 visited[nx][ny]=True                
                 if a[nx][ny]==1:
                     heappush(q,[cnt,nx,ny])
-                elif a[nx][ny]==0:   #!** 사실 그냥 else로 해도됨
+                elif a[nx][ny]==0:              #!** 사실 그냥 else로 해도됨
                     heappush(q,[cnt+1,nx,ny])
 
 
