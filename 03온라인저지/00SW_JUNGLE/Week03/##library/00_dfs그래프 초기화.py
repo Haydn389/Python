@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+sys.setrecursionlimit(10**5)
 input=sys.stdin.readline
 
 #노드 간선 수
@@ -7,6 +8,7 @@ v,e=map(int,input().split())
 v=int(input())
 e=int(input())
 n, m = map(int, input().split())
+n, m,h = map(int, input().split())
 #공백없는 2차원 리스트
 a = [list(map(int,list(input().rstrip()))) for _ in range(n)]
 #공백있는 2차원 리스트
@@ -28,6 +30,7 @@ for _ in range(e):
     graph[b].append(a)
 #방향
 dx,dy=[-1,1,0,0],[0,0,-1,1]
+x,y=0,0
 for i in range(4):
     nx,ny=x+dx[i],y+dy[i] 
     if 0<=nx<n and 0<=ny<m:
