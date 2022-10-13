@@ -16,28 +16,28 @@ def union(p,a,b):
     else:
         p[a]=b
 
-if __name__ == '__main__':
-    #노드개수와 간선 개수 입력받기
-    v,e=map(int,input().split())
-    p=[0]*(v+1)
 
-    edges=[]
-    res=0
+#노드개수와 간선 개수 입력받기
+v,e=map(int,input().split())
+p=[0]*(v+1)
 
-    #부모테이블에서 부모를 자기자신으로 초기화
-    for i in range(1,v+1):p[i]=i
+edges=[]
+res=0
 
-    #모든 간선에 대한 정보 입력받기
-    for _ in range(e):
-        a,b,cost=map(int,input().split())
-        edges.append((cost,a,b))
+#부모테이블에서 부모를 자기자신으로 초기화
+for i in range(1,v+1):p[i]=i
 
-    edges.sort()
+#모든 간선에 대한 정보 입력받기
+for _ in range(e):
+    a,b,cost=map(int,input().split())
+    edges.append((cost,a,b))
 
-    for edge in edges:
-        cost,a,b=edge
+edges.sort()
 
-        if find(p,a)!=find(p,b):
-            union(p,a,b)
-            res+=cost
-    print(res)
+for edge in edges:
+    cost,a,b=edge
+
+    if find(p,a)!=find(p,b):
+        union(p,a,b)
+        res+=cost
+print(res)

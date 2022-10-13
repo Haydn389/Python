@@ -22,13 +22,11 @@ def bfs(x,y):
             nx=x+dx[i]
             ny=y+dy[i]
             if 0<=nx<n and 0<=ny<n and a[nx][ny]!=2:  #!***x,y가 아니라 ny,ny임
+                a[nx][ny]=2 
                 if a[nx][ny]==0:
                     heappush(q,[cnt+1,nx,ny])
-                    a[nx][ny]=2 
-                # elif a[nx][ny]==1:
-                elif a[nx][ny]==1:
+                else:
                     heappush(q,[cnt,nx,ny])
-                    a[nx][ny]=2 
 
 
 

@@ -1,7 +1,6 @@
 import sys
 # input=sys.stdin.readline
 
-
 class Node:
     def __init__(self,key,left,right):
         self.key=key
