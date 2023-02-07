@@ -11,11 +11,4 @@ def quick(array):
 
     return quick(left)+[pivot]+quick(right)
 
-
-
-
-
-
-
-
 print(quick(array))

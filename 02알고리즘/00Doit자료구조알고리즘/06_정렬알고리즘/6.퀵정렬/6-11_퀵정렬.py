@@ -1,6 +1,3 @@
-from pydoc import plain
-
-
 def quick(a,left,right):
     n=len(a)
     pl=left
@@ -17,7 +14,8 @@ def quick(a,left,right):
     if left<pr:quick(a,left,pr)
     if pl<right:quick(a,pl,right)
 
-a=[5,8,4,2,6,1,3,9,7]
+# a=[5,8,4,2,6,1,3,9,7]
+a = [7,5,9,0,3,1,6,2,4,8]
 
 quick(a,0,len(a)-1)
 print(a)

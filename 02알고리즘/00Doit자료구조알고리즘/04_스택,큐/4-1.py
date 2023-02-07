@@ -1,3 +1,1 @@
-class FixedStack:
-    class Empty(Exception):
-        pass
+from typing import Any
