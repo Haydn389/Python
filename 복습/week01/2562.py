@@ -3,7 +3,8 @@ input = sys.stdin.readline
 
 a=[]
 for _ in range(9):
-    a.append(int(input().strip()))
+    a.append(int(input()))
 
-print(a)
-print(a.index(57))
+max_val=max(a)
+print(max_val)
+print(a.index(max_val)+1)
