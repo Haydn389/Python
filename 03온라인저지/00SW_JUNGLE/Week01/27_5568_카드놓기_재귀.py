@@ -19,4 +19,4 @@ def select(cnt):
     global string
 
     if cnt==k:
-        
+        pass
