@@ -10,7 +10,6 @@ for _ in range(e):
     graph[a].append(b)
 visited = [-1]*(v+1)
 
-
 def bfs(x):
     q=deque([x])
     visited[x]=0

@@ -19,7 +19,7 @@ virus.sort()
 q=deque(virus)
 while q:
     v,x,y,cnt=q.popleft()
-    if cnt==S: #문제에서 요구한 시간이되면 break
+    if cnt==S: #문제에서 요구한 시간이되면   break
         break
     for i in range(4):
         nx=x+dx[i]

@@ -1,11 +1,12 @@
 import sys
-input=sys.stdin.readline
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10**9)
 from collections import deque
+input=sys.stdin.readline
+
 v,e,start=map(int,input().split())
 graph=[[] for _ in range(v+1)]
 for _ in range(e):
-    a, b = map(int, input().split())
+    a,b=map(int,input().split())
     graph[a].append(b)
     graph[b].append(a)
 
@@ -13,12 +14,12 @@ for i in graph:
     i.sort()
 
 def dfs(v):
-    visited[v]=True #재귀 호출시 방문처리
+    visited[v]=True
     print(v,end=" ")
     for i in graph[v]:
         if not visited[i]:
             dfs(i)
-
+    pass
 def bfs(start):
     q=deque([start])
     visited[start]=True
@@ -27,15 +28,12 @@ def bfs(start):
         print(v,end=" ")
         for i in graph[v]:
             if not visited[i]:
+                visited[i]=True
                 q.append(i)
-                visited[i]=True #큐에 넣을 때 방문처리
-    # while q:
-    #     pass
-    # pass
 
-
-visited = [False]*(v+1)
+visited=[False]*(v+1)
 dfs(start)
 print()
-visited = [False]*(v+1)
+visited=[False]*(v+1)
 bfs(start)
+
