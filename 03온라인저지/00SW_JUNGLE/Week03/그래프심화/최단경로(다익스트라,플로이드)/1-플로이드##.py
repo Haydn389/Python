@@ -1,3 +1,4 @@
+#인접행렬 방식
 import sys
 INF=sys.maxsize
 input= sys.stdin.readline

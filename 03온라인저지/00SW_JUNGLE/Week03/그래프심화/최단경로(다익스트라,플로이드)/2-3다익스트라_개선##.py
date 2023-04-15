@@ -1,3 +1,4 @@
+#인접리스트 방식
 from heapq import heappush,heappop
 import sys
 input=sys.stdin.readline
