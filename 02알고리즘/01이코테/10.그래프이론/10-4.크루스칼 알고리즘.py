@@ -31,7 +31,7 @@ for _ in range(e):
     edges.append((cost,a,b))
 
 edges.sort()
-
+print(edges)
 for edge in edges:
     cost,a,b=edge
 

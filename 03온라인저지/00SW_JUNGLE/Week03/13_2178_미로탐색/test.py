@@ -1,29 +1,19 @@
-import sys
-from collections import deque
-input=sys.stdin.readline
+import time
+s1=time.process_time()
+a=[-1*i for i in range(1,9000000)]
+sum=0
+for j in a:
+    if j<0:
+        sum+=(-j)
+    else:
+        sum+=j
+print(sum)
+s2=time.process_time()
+sum=0
+for j in a:
+    sum+=abs(j)
+s3=time.process_time()
 
-n,m=map(int,input().split())
-a=[list(map(int,input().rstrip())) for _ in range(n)]
-dx=[-1,1,0,0]
-dy=[0,0,-1,1]
-
-def bfs(x,y):
-    q=deque([(x,y)])
-    # q=deque()
-    # q.append((x,y))
-    while q:
-        x,y=q.popleft()
-        for i in range(4):
-            nx=x+dx[i] 
-            ny=y+dy[i] 
-            if 0<=nx<n and 0<=ny<m and a[nx][ny]==1:
-                a[nx][ny]=a[x][y]+1
-                q.append((nx,ny))
-        # for k in a:
-        #     print(k)
-        # print("="*30)
-bfs(0,0)
-# for g in a:
-#     print(g)
-
-print(a[n-1][m-1])
+print(s2-s1)
+print(s3-s2)
+print(s2-s1-s3+s2)

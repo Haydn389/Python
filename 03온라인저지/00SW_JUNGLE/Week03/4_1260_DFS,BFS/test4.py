@@ -1,8 +1,7 @@
 import sys
-sys.setrecursionlimit(10**9)
-from collections import deque
 input=sys.stdin.readline
-
+sys.setrecursionlimit(10**5)
+from collections import deque
 v,e,start=map(int,input().split())
 graph=[[] for _ in range(v+1)]
 for _ in range(e):
@@ -15,11 +14,10 @@ for i in graph:
 
 def dfs(v):
     visited[v]=True
-    print(v,end=" ")
     for i in graph[v]:
         if not visited[i]:
             dfs(i)
-    pass
+
 def bfs(start):
     q=deque([start])
     visited[start]=True
@@ -28,12 +26,15 @@ def bfs(start):
         print(v,end=" ")
         for i in graph[v]:
             if not visited[i]:
-                visited[i]=True
                 q.append(i)
+                visited[i]=True
+
+
+
+
 
 visited=[False]*(v+1)
 dfs(start)
 print()
 visited=[False]*(v+1)
 bfs(start)
-

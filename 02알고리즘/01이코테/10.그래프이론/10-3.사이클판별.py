@@ -28,7 +28,7 @@ for i in range(e):
     if find_parent(parent,a)==find_parent(parent,b):
         cycle=True
         break
-    else:
+    else:#!** 주의ㄴ
         union_parent(parent,a,b)
 if cycle:
     print("사이클이 발생했습니다.")
