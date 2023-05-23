@@ -1,48 +1,35 @@
 import sys
-from itertools import combinations
-input=sys.stdin.readline
+n, k = map(int, input().split())
+color = [[] for i in range(k + 1)]
+result = [987654321]
 
-n,k=map(int,input().split())
-arr=[[] for _ in range(k+1)]
-visited=[[] for _ in range(k+1)]
-length=[0]*(k+1)
-for _ in range(n):
-    x,y,color=map(int,input().split())
-    arr[color].append((x,y))
-    visited[color].append(0)
-    length[color]+=1
-# print(arr)
-# print(visited)
-# print(length)
-pos=[0]*(k+1)
-ans=sys.maxsize
-def dfs(i):
-    global k,visited,ans
-    if i==k+1:
-        max_x=-1000
-        min_x=1000
-        max_y=-1000
-        min_y=1000
-        for xv,yv in pos[1:]:
-            if max_x<xv:
-                max_x=xv
-            if min_x>xv:
-                min_x=xv
-            if max_y<yv:
-                max_y=yv
-            if min_y>yv:
-                min_y=yv
-        area=abs((max_x-min_x)*(max_y-min_y))
-        # print(pos,area)
-        if  ans > area:
-            ans=area
+for i in range(n):
+    a, b, c = map(int, sys.stdin.readline().split())
+    color[c].append([a, b])
+
+def dfs(lx, ly, hx, hy, cnt, current):
+    if cnt == k + 1:
+        if result[0] > current:
+            result[0] = current
         return
-    for j in range(length[i]):
-        if not visited[i][j]:
-            pos[i]=arr[i][j]
-            visited[i][j]=1
-            dfs(i+1)
-            visited[i][j]=0        
-dfs(1)
 
-print(ans)
+    for point in color[cnt]:
+        x1, x2, y1, y2 = lx, hx, ly, hy
+        if point[0] < lx:
+            x1 = point[0]
+        elif point[0] > hx:
+            x2 = point[0]
+        if point[1] < ly:
+            y1 = point[1]
+        elif point[1] > hy:
+            y2 = point[1]
+
+        temp = abs(x2 - x1) * abs(y2 - y1)
+        if temp < result[0]:
+            dfs(x1, y1, x2, y2, cnt + 1, temp)
+
+
+for p in color[1]:
+    dfs(p[0], p[1], p[0], p[1], 2, 0)
+
+print(result[0])
