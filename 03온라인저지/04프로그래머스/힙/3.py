@@ -1,15 +1,4 @@
 from heapq import heappush,heappop,heapify
-def make_max(heap):
-    res=[]
-    for i in heap:
-        heappush(res,h)
-        
-def make_min(heap):
-    res=[]
-    for i in heap:
-        heappush(res,h)
-        
-
 def solution(operations):
     h=[]
     for c in operations:
